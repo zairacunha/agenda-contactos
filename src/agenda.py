@@ -1,6 +1,14 @@
 # src/agenda.py - Agenda de Contactos
 
 contactos = []
+def guardar_contactos():
+	if len(contactos) == 0:
+		print("📋 No hay contactos para guardar.")
+		return
+	with open("contactos.txt", "w") as archivo:
+		for c in contactos:
+			archivo.write(f"{c['nombre']},{c['telefono']}\n")
+	print(f"💾 {len(contactos)} contacto(s) guardados en 'contactos.txt'.")
 def agregar_contacto():
 	nombre = input("Nombre del contacto: ").strip()
 	if nombre == "":
@@ -71,6 +79,7 @@ def main():
 		elif opcion == "4":
 			eliminar_contacto()
 		elif opcion == "5":
+			guardar_contactos()
 			print("\n¡Hasta luego!")
 			break
 		else:

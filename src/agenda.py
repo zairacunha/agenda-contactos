@@ -2,6 +2,7 @@
 
 contactos = []
 def guardar_contactos():
+
 	if len(contactos) == 0:
 		print("📋 No hay contactos para guardar.")
 		return
@@ -9,7 +10,9 @@ def guardar_contactos():
 		for c in contactos:
 			archivo.write(f"{c['nombre']},{c['telefono']}\n")
 	print(f"💾 {len(contactos)} contacto(s) guardados en 'contactos.txt'.")
+
 def agregar_contacto():
+
 	nombre = input("Nombre del contacto: ").strip()
 	if nombre == "":
 		print("⚠️ El nombre no puede estar vacío.")
@@ -20,7 +23,9 @@ def agregar_contacto():
 		return
 	contactos.append({"nombre": nombre, "telefono": telefono})
 	print(f"✅ Contacto '{nombre}' agregado correctamente.")
+
 def ver_contactos():
+
 	if len(contactos) == 0:
 		print("\n📋 La agenda está vacía.")
 		return
@@ -30,7 +35,9 @@ def ver_contactos():
 		print(f" {i}. {c['nombre']} — {c['telefono']}")
 	print("-" * 30)
 	print(f"Total: {len(contactos)} contacto(s)")
+
 def buscar_contacto():
+
 	if len(contactos) == 0:
 		print("\n📋 La agenda está vacía.")
 		return
@@ -47,6 +54,7 @@ def buscar_contacto():
 			print(f" • {c['nombre']} — {c['telefono']}")
 
 def eliminar_contacto():
+
 	if len(contactos) == 0:
 		print("\n📋 La agenda está vacía.")
 		return
@@ -57,7 +65,9 @@ def eliminar_contacto():
 			print(f"️ Contacto '{c['nombre']}' eliminado.")
 			return
 	print(f"❌ No se encontró el contacto '{nombre}'.")
+
 def mostrar_menu():
+
 	print("\n===== AGENDA DE CONTACTOS =====")
 	print("1. Agregar contacto")
 	print("2. Ver todos los contactos")
@@ -65,7 +75,9 @@ def mostrar_menu():
 	print("4. Eliminar contacto")
 	print("5. Guardar y salir")
 	print("================================")
+
 def main():
+
 	print("¡Bienvenido a la Agenda de Contactos!")
 	while True:
 		mostrar_menu()

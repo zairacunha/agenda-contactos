@@ -12,3 +12,9 @@ de contactos: agregar, ver, buscar, eliminar y guardar en archivo.
 ```bash
 cd src
 python3 agenda.py
+## Tecnologías
+- Python 3
+- Git y GitHub
+
+## Autor
+- Zaira Cunha — [@zairacunha](https://github.com/zairacunha)

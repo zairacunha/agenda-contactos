@@ -62,7 +62,7 @@ def eliminar_contacto():
 	for c in contactos:
 		if c["nombre"].lower() == nombre:
 			contactos.remove(c)
-			print(f"️ Contacto '{c['nombre']}' eliminado.")
+			print(f"🗑️ Contacto '{c['nombre']}' eliminado.")
 			return
 	print(f"❌ No se encontró el contacto '{nombre}'.")
 
